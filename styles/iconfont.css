@@ -1,51 +1,46 @@
-        @font-face {
-            font-family: 'MaterialIcons';
-            src: local('Material Icons'), local('/iconfonts/MaterialIcons-Regular'), url('/iconfonts/MaterialIcons-Regular.woff2') format('woff2'), url('/iconfonts/MaterialIcons-Regular.woff') format('woff'), url('/iconfonts//iconfonts/MaterialIcons-Regular.ttf') format('truetype');
-        }
-
 @font-face {
-            font-family: 'RobotoMedium';
-            src: local('RobotoMedium'), local('/fonts/Roboto-Medium-webfont'), url('/fonts/Roboto-Medium-webfont.woff2') format('woff2'), url('/fonts/Roboto-Medium-webfont.woff') format('woff'), url('/fonts//iconfonts/Roboto-Medium-webfont.ttf') format('truetype');
-        }
-
-@font-face {
-            font-family: 'RobotoLight';
-            src: local('Roboto Light'), local('/fonts/Roboto-Light-webfont'), url('/fonts/Roboto-Light-webfont.woff2') format('woff2'), url('/fonts/Roboto-Light-webfont.woff') format('woff'), url('/fonts//iconfonts/Roboto-Light-webfont.ttf') format('truetype');
-        }
-
-        .material-icons {
-            font-family: 'MaterialIcons';
-            font-weight: normal;
-            font-style: normal;
-            font-size: 24px;
-            /* Preferred icon size */
-            
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            line-height: 1;
-            text-transform: none;
-            letter-spacing: normal;
-            /* Support for all WebKit browsers. */
-            
-            -webkit-font-smoothing: antialiased;
-            /* Support for Safari and Chrome. */
-            
-            text-rendering: optimizeLegibility;
-            /* Support for Firefox. */
-            
-            -moz-osx-font-smoothing: grayscale;
-            /* Support for IE. */
-            
-            font-feature-settings: 'liga';
-        }
-
-body{
-    font-family:RobotoMedium;
-    font-size: 14px;
+    font-family: 'MaterialIcons';
+    src: local('Material Icons'), local('/iconfonts/MaterialIcons-Regular'), url('/iconfonts/MaterialIcons-Regular.woff2') format('woff2'), url('/iconfonts/MaterialIcons-Regular.woff') format('woff'), url('/iconfonts//iconfonts/MaterialIcons-Regular.ttf') format('truetype');
 }
 
-.font-medium{
+@font-face {
+    font-family: 'RobotoMedium';
+    src: local('RobotoMedium'), local('/fonts/Roboto-Medium-webfont'), url('/fonts/Roboto-Medium-webfont.woff2') format('woff2'), url('/fonts/Roboto-Medium-webfont.woff') format('woff'), url('/fonts/Roboto-Medium-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoLight';
+    src: local('Roboto Light'), local('/fonts/Roboto-Light-webfont'), url('/fonts/Roboto-Light-webfont.woff2') format('woff2'), url('/fonts/Roboto-Light-webfont.woff') format('woff'), url('/fonts/Roboto-Light-webfont.ttf') format('truetype');
+}
+
+.material-icons {
+    font-family: 'MaterialIcons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    /* Preferred icon size */
+    
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    /* Support for all WebKit browsers. */
+    
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    
+    font-feature-settings: 'liga';
+}
+
+.font-medium {
     font-family: 'RobotoMedium';
     font-weight: normal;
     font-style: normal;
@@ -59,14 +54,14 @@ body{
     
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
-            
+    
     text-rendering: optimizeLegibility;
     /* Support for Firefox. */
     
     -moz-osx-font-smoothing: grayscale;
 }
 
-.font-medium{
+.font-medium {
     font-family: 'RobotoLight';
     font-weight: normal;
     font-style: normal;
@@ -80,10 +75,9 @@ body{
     
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
-            
+    
     text-rendering: optimizeLegibility;
     /* Support for Firefox. */
     
     -moz-osx-font-smoothing: grayscale;
 }
-
