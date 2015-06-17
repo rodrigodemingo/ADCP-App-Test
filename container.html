@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>ADPC Home Page</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="styles/base.min.css" />
+    <link rel="stylesheet" href="styles/iconfont.css" />
+    <link rel="stylesheet" href="styles/bootstrap-switch.min.css" />
+    <link href="styles/snarl.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="scripts/highlight.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="scripts/bootstrap-switch.min.js"></script>
+    <script src="scripts/snarl.min.js" type="text/javascript"></script>
+    <script src="scripts/waves.min.js" type="text/javascript"></script>
+
+    <style>
+        .cardtitle {
+            font-size: 20px;
+            background-color: #3e7c9c;
+            color: #fff;
+            padding: 10px 0px 10px 0px;
+        }
+        
+        body {
+            font-family: Roboto, RobotoMedium;
+            font-size: 14px;
+            background-color: #eee;
+        }
+        
+        .pagemargin {
+            margin-left: 83px;
+            margin-right: 83px;
+        }
+        
+        .card {
+            margin-top: 40px
+        }
+        
+        button.btn {
+            width: 100px;
+        }
+        
+        .material-icons.red {
+            color: #ad1f14;
+        }
+        
+        .material-icons.green {
+            color: #5ebf2a;
+        }
+        
+        .material-icons.blue {
+            color: #20a5e8;
+        }
+        
+        .logo {
+            width: 10%;
+        }
+        
+        .login {
+            margin-top: 30px;
+        }
+        
+        .status-bar label,
+        {
+            margin-left: 10px;
+        }
+        
+        .cardcontentmargin {
+            margin: 10px 0px 10px 0px;
+        }
+    </style>
+    <script type="text/javascript">
+        var filter = 'show';
+
+        function showmode(mode) {
+            $('#appmode').text(mode);
+        }
+
+        function showorhidefilter() {
+            if (filter == 'hide') {
+                $('#filterbox').show();
+                filter = 'show';
+            } else if (filter == 'show') {
+                $('#filterbox').hide();
+                filter = 'hide';
+            }
+        }
+
+
+        function savechanges() {
+            alert("Saved Changes");
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="pagemargin">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="logo pull-left" src="images/logo.png" />
+                <a href="#" id="notify"><img class="login pull-right" src="images/login.png" />
+                </a>
+            </div>
+        </div>
+        <!--Menu - rgb(55,71,79), Status - rgb(236,239,241) -->
+    </div>
+    <!--STATUS BAR -->
+    <div class="col-lg-12">
+        <div class="status-bar">
+            <label><strong>Voyage Number:&nbsp;</strong>
+            </label>
+            <label><strong>Port:&nbsp;</strong>
+            </label>
+            <label>Khalifa Port</label>
+            <label>KHL1212345</label>
+            <label><strong>Vessel:&nbsp;</strong>
+            </label>
+            <label>13/03/2015 12:30</label>
+            <label><strong>ATA:&nbsp;</strong>
+            </label>
+            <label>13/03/2015 12:30</label>
+            <label><strong>ETA:&nbsp;</strong>
+            </label>
+            <label>APL Phoenix</label>
+            <span id="appmode" class="label label-inverse pull-right">Inverse</span>
+        </div>
+    </div>
+    <!-- MAIN MENU -->
+    <div class="col-lg-12" style="background-color:rgb(55,71,79);padding:10px 0px 10px 0px;padding-right:30px">
+        <label style="margin-right:30px;color:rgb(255,255,255);margin-top:5px;margin-right:105px;" class="pull-right">Client To Port</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Port to Client</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Vessel Operations</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Manifest</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Vessel Call</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">General</label>
+    </div>
+
+
+
+    <!--CONTENT-->
+    <div class="row pagemargin">
+
+        <div class="col-lg-12" id="cardview">
+
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card card-blue">
+                        <div class="card-main">
+                            <div>
+                                <div class="cardtitle">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            General
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="row cardcontentmargin">
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> Terminal*: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> Status: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> List Reference*: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> Status Date: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card card-blue">
+                        <div class="card-main">
+                            <div>
+                                <div class="cardtitle">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            Container
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="row cardcontentmargin">
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label> Container Number*: </labe>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label>Shipping Line*: </label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label>Size and Type*: </label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label>Full / Empty*: </label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label>Booking Number : </label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label>Gross Weight : </label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label>Cargo Description : </label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-main">
+
+                                            <div class="row cardcontentmargin">
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label> Port of Loading*: </labe>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4">
+                                                            <label>Port of Discharge*: </label>
+                                                        </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="row">
+                                                        <div class="col-lg-4"> Shipping owned Container: </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="checkbox" class="form-control" /> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-4"> Status: </div>
+                                                        <div class="col-lg-8">
+                                                            <input type="text" class="form-control" /> </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-12">
+                    <div class="card card-blue">
+                        <div class="card-main">
+                            <div>
+                                <div class="cardtitle">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            Transhipment
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="row cardcontentmargin">
+                                                <div class="col-lg-12">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> Loading Vessel*: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> Next Discharge Port*: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> Loading Vessel Voyage: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"> Loading Vessel Rotation: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row clearfix">
+                <div class="col-lg-6">
+                    <div class="card card-blue">
+                        <div class="card-main">
+                            <div>
+                                <div class="cardtitle">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            Add Seals
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <input type="button" value="Add" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <th>Number</th>
+                                                            <th>Type</th>
+                                                            <th>Delete</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-blue">
+                        <div class="card-main">
+                            <div>
+                                <div class="cardtitle">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            Add Special Instructions
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <input type="button" value="Add" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <th>Number</th>
+                                                            <th>Type</th>
+                                                            <th>Delete</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row clearfix">
+                <div class="col-lg-6">
+                    <div class="card card-blue">
+                        <div class="card-main">
+                            <div>
+                                <div class="cardtitle">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            Add Seals
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <input type="button" value="Add" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <th>Number</th>
+                                                            <th>Type</th>
+                                                            <th>Delete</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card card-blue">
+                        <div class="card-main">
+                            <div>
+                                <div class="cardtitle">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            Out of Gauge Dimensions
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <div class="card">
+                                        <div class="card-main">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <input type="button" value="Add" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <table width="100%">
+                                                        <tr>
+                                                            <th>Number</th>
+                                                            <th>Type</th>
+                                                            <th>Delete</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>123456789</td>
+                                                            <td>Carrier Seal</td>
+                                                            <td>X</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="fbtn-container-save">
+                <div id="menu1" class="fbtn-inner">
+                    <a class="fbtn fbtn-blue fbtn-lg" onclick="savechanges()" data-toggle="dropdown"><span class="fbtn-text">Links</span><span class="fbtn-ori icon icon-open-in-new">Save</span><span class="fbtn-sub icon icon-close">Save</span></a>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="scripts/base.min.js"></script>
+        <script src="scripts/bootstrap-switch.min.js"></script>
+        <script src="scripts/highlight.js"></script>
+        <script src="scripts/model.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                showmode('View');
+                $('#btnCreate').click(function () {
+                    showmode('Edit')
+                });
+                $('#btnView').click(function () {
+                    showmode('View')
+                });
+                $('#btnDelete').click(function () {
+                    showmode('Edit')
+                });
+                $('#btnEdit').click(function () {
+                    showmode('Edit')
+                });
+                $('#btnClose').click(function () {
+                    alert("Closed");
+                });
+                $('#btnOkay').click(function () {
+                    alert("Okay");
+                });
+
+                // Notification Starts Here
+
+                Snarl.setDefaultOptions({
+                    timeout: 2500
+                });
+
+                $('#notify').click(function () {
+                    Snarl.addNotification({
+                        title: 'Message',
+                        text: 'Message Sent Successfully'
+                    });
+                });
+
+            });
+        </script>
+
+</body>
+
+</html>
