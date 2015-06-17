@@ -6,125 +6,20 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="initial-scale=1.0, width=device-width" name="viewport">
     <title>ADPC Home Page</title>
-
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic" media="all">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
-    <link rel="stylesheet" href="styles/base.min.css" />
     <link rel="stylesheet" href="styles/iconfont.css" />
     <link rel="stylesheet" href="styles/bootstrap-switch.min.css" />
     <link href="styles/snarl.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="styles/base.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
 
     <script src="scripts/highlight.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="scripts/bootstrap-switch.min.js"></script>
     <script src="scripts/snarl.min.js" type="text/javascript"></script>
     <script src="scripts/waves.min.js" type="text/javascript"></script>
-
-    <style>
-        .cardtitle {
-            font-size: 20px;
-            background-color: #3e7c9c;
-            color: #fff;
-            padding: 10px 0px 10px 0px;
-        }
-        
-        body {
-            font-family: Roboto, RobotoMedium;
-            font-size: 14px;
-            background-color: #eee;
-        }
-        
-        .pagemargin {
-            margin-left: 83px;
-            margin-right: 83px;
-        }
-        
-        .card {
-            margin-top: 40px
-        }
-        
-        button.btn {
-            width: 100px;
-        }
-        
-        .material-icons.red {
-            color: #ad1f14;
-        }
-        
-        .material-icons.green {
-            color: #5ebf2a;
-        }
-        
-        .material-icons.blue {
-            color: #20a5e8;
-        }
-        
-        .logo {
-            width: 10%;
-        }
-        
-        .login {
-            margin-top: 30px;
-        }
-        
-        .status-bar {
-            text-align: right;
-            padding-right: 60px;
-            background-color: rgba(55, 71, 79, 0.1);
-            line-height: 30px;
-            font-size: 13px;
-        }
-        
-        .status-bar label,
-        .status-bar label strong {
-            margin-left: 10px;
-        }
-        
-        .cardcontentmargin {
-            margin: 10px 0px 10px 0px;
-        }
-        
-        .tab-main-menu {
-            background-color: #37474F;
-            margin: 0;
-        }
-        
-        .tab-main-menu .nav>li.active>a,
-        .tab-main-menu .nav>li>a {
-            color: white;
-        }
-        
-        .tab-main-menu .nav>li.active>a:hover,
-        .tab-main-menu .nav>li.active>a:focus,
-        .tab-main-menu .nav>li:hover {
-            color: black;
-        }
-        
-        #appmode {
-            margin: 0 40px;
-            width: 60px;
-            display: inline-block;
-            line-height: 14px;
-            text-transform: uppercase;
-            font-size: 14px;
-        }
-        
-        .no-boxshadow .tile,
-        .table td,
-        .table th {
-            border: none;
-        }
-        span.fbtn-sub.icon.icon-close,
-        span.fbtn-ori.icon.icon-open-in-new {
-            font-family: Roboto;
-        }
-        
-        .fbtn {
-            font-size: 14px;
-            margin: 0;
-        }
-    </style>
     <script type="text/javascript">
         var filter = 'show';
 
@@ -213,7 +108,7 @@
         </div>
     </div>
     <!--CONTENT-->
-    <div class="row pagemargin">
+    <div class="pagemargin">
         <!-- Row 3 -->
         <div class="col-lg-12" id="filterbox">
             <div class="card">
@@ -365,7 +260,8 @@
                                                 <div class="modal-inner">
                                                     <div class="row">
                                                         <div class="col-lg-6">
-                                                            <stong class="form-control">Terminal*: </stong>
+                                                            <div class="form-control"><strong>Terminal*: </strong>
+                                                            </div>
                                                         </div>
                                                         <div class="col-lg-6">
                                                             <select class="form-control">
@@ -872,8 +768,8 @@
                     text: 'Message Sent Successfully'
                 });
             });
-            var qs=getQueryStrings();
-            if(qs["saved"]=="true"){
+            var qs = getQueryStrings();
+            if (qs["saved"] == "true") {
                 Snarl.addNotification({
                     title: 'Container',
                     text: 'Container Saved Successfully'
