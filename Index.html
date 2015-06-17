@@ -68,13 +68,61 @@
             margin-top: 30px;
         }
         
+        .status-bar {
+            text-align: right;
+            padding-right: 60px;
+            background-color: rgba(55, 71, 79, 0.1);
+            line-height: 30px;
+            font-size: 13px;
+        }
+        
         .status-bar label,
-        {
+        .status-bar label strong {
             margin-left: 10px;
         }
         
         .cardcontentmargin {
             margin: 10px 0px 10px 0px;
+        }
+        
+        .tab-main-menu {
+            background-color: #37474F;
+            margin: 0;
+        }
+        
+        .tab-main-menu .nav>li.active>a,
+        .tab-main-menu .nav>li>a {
+            color: white;
+        }
+        
+        .tab-main-menu .nav>li.active>a:hover,
+        .tab-main-menu .nav>li.active>a:focus,
+        .tab-main-menu .nav>li:hover {
+            color: black;
+        }
+        
+        #appmode {
+            margin: 0 40px;
+            width: 60px;
+            display: inline-block;
+            line-height: 14px;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        
+        .no-boxshadow .tile,
+        .table td,
+        .table th {
+            border: none;
+        }
+        span.fbtn-sub.icon.icon-close,
+        span.fbtn-ori.icon.icon-open-in-new {
+            font-family: Roboto;
+        }
+        
+        .fbtn {
+            font-size: 14px;
+            margin: 0;
         }
     </style>
     <script type="text/javascript">
@@ -115,37 +163,55 @@
     </div>
     <!--STATUS BAR -->
     <div class="col-lg-12">
-        <div class="status-bar">
-            <label><strong>Voyage Number:&nbsp;</strong>
-            </label>
-            <label><strong>Port:&nbsp;</strong>
-            </label>
-            <label>Khalifa Port</label>
-            <label>KHL1212345</label>
-            <label><strong>Vessel:&nbsp;</strong>
-            </label>
-            <label>13/03/2015 12:30</label>
-            <label><strong>ATA:&nbsp;</strong>
-            </label>
-            <label>13/03/2015 12:30</label>
-            <label><strong>ETA:&nbsp;</strong>
-            </label>
-            <label>APL Phoenix</label>
-            <span id="appmode" class="label label-inverse pull-right">Inverse</span>
+        <div class="row">
+            <div class="status-bar">
+                <label><strong>Voyage Number:</strong>
+                </label>
+                <label>KHL1212345</label>
+                <label><strong>Port:</strong>
+                </label>
+                <label>Khalifa Port</label>
+                <label><strong>Vessel:</strong>
+                </label>
+                <label>13/03/2015 12:30</label>
+                <label><strong>ATA:</strong>
+                </label>
+                <label>13/03/2015 12:30</label>
+                <label><strong>ETA:</strong>
+                </label>
+                <label>APL Phoenix</label>
+                <span id="appmode" class="label label-default">VIEW</span>
+            </div>
         </div>
     </div>
     <!-- MAIN MENU -->
-    <div class="col-lg-12" style="background-color:rgb(55,71,79);padding:10px 0px 10px 0px;padding-right:30px">
-        <label style="margin-right:30px;color:rgb(255,255,255);margin-top:5px;margin-right:105px;" class="pull-right">Client To Port</label>
-        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Port to Client</label>
-        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Vessel Operations</label>
-        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Manifest</label>
-        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Vessel Call</label>
-        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">General</label>
+    <div class="col-lg-12 tab-main-menu">
+        <div class="col-lg-8 pull-right">
+            <nav class="tab-nav tab-nav-red tab-main-menu">
+                <ul class="nav nav-justified">
+                    <li>
+                        <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">General</a>
+                    </li>
+                    <li>
+                        <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">Vessel Call</a>
+                    </li>
+                    <li>
+                        <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">Manifest</a>
+                    </li>
+                    <li class="active">
+                        <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">Vessel Operations</a>
+                    </li>
+                    <li>
+                        <a class="waves-color-red waves-effect" data-toggle="tab" href="#first-tab-red" aria-expanded="false">Client To Port</a>
+                    </li>
+                    <li>
+                        <a class="waves-color-red waves-effect" data-toggle="tab" href="#second-tab-red" aria-expanded="true">Port to Client</a>
+                    </li>
+                </ul>
+                <div class="tab-nav-indicator" style="left: 204px; right: 221px;"></div>
+            </nav>
+        </div>
     </div>
-
-
-
     <!--CONTENT-->
     <div class="row pagemargin">
         <!-- Row 3 -->
@@ -258,243 +324,244 @@
             </div>
         </div>
         <!-- TABLE GRID -->
-        <div class="col-lg-12" id="listview">
-            <div class="table-responsive">
-                <table class="table table-hover table-stripe" title="Table with Hover and Stripe Rows">
-                    <thead>
-                        <tr>
-                            <th>Alerts</th>
-                            <th>Vessel</th>
-                            <th>Voyage</th>
-                            <th>Vessel Agent</th>
-                            <th>ETA/ATA</th>
-                            <th>ETD/ATD</th>
-                            <th>CR</th>
-                            <th>LL</th>
-                            <th>MF</th>
-                            <th>DL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons">archive</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
-                                <div aria-hidden="true" class="modal fade" id="modal-big" role="dialog" tabindex="-1" style="display: none;">
-                                    <div class="modal-dialog modal-xs">
-                                        <div class="modal-content">
-                                            <div class="modal-heading">
-                                                <a class="modal-close" data-dismiss="modal">×</a>
-                                                <h2 class="modal-title">New Loading/Discharge List</h2>
-                                            </div>
-                                            <div class="modal-inner">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <stong class="form-control">Terminal*: </stong>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <select class="form-control">
-                                                            <option value="Value1">Filter 2</option>
-                                                            <option value="Value 2">Value 2</option>
-                                                            <option value="Value 3">Value 3</option>
-                                                        </select>
+        <div id="listview">
+            <div class="col-lg-12 card">
+                <div class="col-lg-12 table-responsive">
+                    <table class="table table-hover table-stripe" title="Table with Hover and Stripe Rows">
+                        <thead>
+                            <tr>
+                                <th>Alerts</th>
+                                <th>Vessel</th>
+                                <th>Voyage</th>
+                                <th>Vessel Agent</th>
+                                <th>ETA/ATA</th>
+                                <th>ETD/ATD</th>
+                                <th>CR</th>
+                                <th>LL</th>
+                                <th>MF</th>
+                                <th>DL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons">archive</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
+                                    <div aria-hidden="true" class="modal fade" id="modal-big" role="dialog" tabindex="-1" style="display: none;">
+                                        <div class="modal-dialog modal-xs">
+                                            <div class="modal-content">
+                                                <div class="modal-heading">
+                                                    <a class="modal-close" data-dismiss="modal">×</a>
+                                                    <h2 class="modal-title">New Loading/Discharge List</h2>
+                                                </div>
+                                                <div class="modal-inner">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <stong class="form-control">Terminal*: </stong>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <select class="form-control">
+                                                                <option value="Value1">Filter 2</option>
+                                                                <option value="Value 2">Value 2</option>
+                                                                <option value="Value 3">Value 3</option>
+                                                            </select>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <p class="text-right">
+                                                <div class="modal-footer">
+                                                    <p class="text-right">
 
-                                                    <a class="btn btn-blue waves-button waves-effect waves-light" data-toggle="modal" href="#modal-big1" data-dismiss="modal">Yes</a>
-                                                    <a class="btn btn-default waves-button waves-effect waves-light" data-toggle="modal" href="#modal-big1" data-dismiss="modal">No</a>
+                                                        <a class="btn btn-blue waves-button waves-effect waves-light" data-toggle="modal" href="#modal-big1" data-dismiss="modal">Yes</a>
+                                                        <a class="btn btn-default waves-button waves-effect waves-light" data-toggle="modal" href="#modal-big1" data-dismiss="modal">No</a>
 
-                                                </p>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div aria-hidden="true" class="modal fade" id="modal-big1" role="dialog" tabindex="-1" style="display: none;">
-                                    <div class="modal-dialog modal-xs">
-                                        <div class="modal-content">
-                                            <div class="modal-heading">
-                                                <a class="modal-close" data-dismiss="modal">×</a>
-                                                <h2 class="modal-title">New Loading/Discharge List</h2>
-                                            </div>
-                                            <div class="modal-inner">
-                                                <p>Some Containers have been found in the manifest information.</p>
-                                                <p>Do you want to retrieve that information to the last?</p>
+                                    <div aria-hidden="true" class="modal fade" id="modal-big1" role="dialog" tabindex="-1" style="display: none;">
+                                        <div class="modal-dialog modal-xs">
+                                            <div class="modal-content">
+                                                <div class="modal-heading">
+                                                    <a class="modal-close" data-dismiss="modal">×</a>
+                                                    <h2 class="modal-title">New Loading/Discharge List</h2>
+                                                </div>
+                                                <div class="modal-inner">
+                                                    <p>Some Containers have been found in the manifest information.</p>
+                                                    <p>Do you want to retrieve that information to the last?</p>
 
-                                            </div>
-                                            <div class="modal-footer">
-                                                <p class="text-right">
-                                                    <button class="btn btn-blue waves-button waves-effect waves-light" id="btnClose" data-dismiss="modal" type="button">Close</button>
-                                                    <button class="btn btn-default waves-button waves-effect waves-light" id="btnOkay" data-dismiss="modal" type="button">Okay</button>
-                                                </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <p class="text-right">
+                                                        <button class="btn btn-blue waves-button waves-effect waves-light" id="btnClose" data-dismiss="modal" type="button">Close</button>
+                                                        <button class="btn btn-default waves-button waves-effect waves-light" id="btnOkay" data-dismiss="modal" type="button">Okay</button>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons green">check_circle</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons">send</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons">archive</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons blue">add_circle</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons green">check_circle</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons">send</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons">archive</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons blue">add_circle</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons green">check_circle</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons">send</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons">archive</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons blue">add_circle</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons green">check_circle</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons">send</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons">archive</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons blue">add_circle</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>IBN Bassam</td>
-                            <td>3AS</td>
-                            <td>A Reyemi Cargo Clearing & management Service</td>
-                            <td>23/05/2015 12:30 pm</td>
-                            <td>23/05/2015 05:30 am</td>
-                            <td><i class="material-icons green">check_circle</i>
-                            </td>
-                            <td><i class="material-icons">border_color</i>
-                            </td>
-                            <td><i class="material-icons">send</i>
-                            </td>
-                            <td><i class="material-icons red">report_problem</i>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons green">check_circle</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons">send</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons">archive</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons blue">add_circle</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons green">check_circle</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons">send</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons">archive</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons blue">add_circle</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons green">check_circle</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons">send</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons">archive</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons blue">add_circle</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons green">check_circle</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons">send</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons">archive</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons blue">add_circle</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>IBN Bassam</td>
+                                <td>3AS</td>
+                                <td>A Reyemi Cargo Clearing & management Service</td>
+                                <td>23/05/2015 12:30 pm</td>
+                                <td>23/05/2015 05:30 am</td>
+                                <td><i class="material-icons green">check_circle</i>
+                                </td>
+                                <td><i class="material-icons">border_color</i>
+                                </td>
+                                <td><i class="material-icons">send</i>
+                                </td>
+                                <td><i class="material-icons red">report_problem</i>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-
 
         <div class="col-lg-12" id="cardview">
 

@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: 'RobotoMedium';
-    src: local('RobotoMedium'), local('/fonts/Roboto-Medium-webfont'), url('/fonts/Roboto-Medium-webfont.woff2') format('woff2'), url('/fonts/Roboto-Medium-webfont.woff') format('woff'), url('/fonts/Roboto-Medium-webfont.ttf') format('truetype');
+    src: local('RobotoMedium'), local('fonts/Roboto-Medium-webfont'), url('fonts/Roboto-Medium-webfont.woff2') format('woff2'), url('fonts/Roboto-Medium-webfont.woff') format('woff'), url('fonts/Roboto-Medium-webfont.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'RobotoLight';
-    src: local('Roboto Light'), local('/fonts/Roboto-Light-webfont'), url('/fonts/Roboto-Light-webfont.woff2') format('woff2'), url('/fonts/Roboto-Light-webfont.woff') format('woff'), url('/fonts/Roboto-Light-webfont.ttf') format('truetype');
+    src: local('Roboto Light'), local('fonts/Roboto-Light-webfont'), url('fonts/Roboto-Light-webfont.woff2') format('woff2'), url('fonts/Roboto-Light-webfont.woff') format('woff'), url('fonts/Roboto-Light-webfont.ttf') format('truetype');
 }
 
 .material-icons {
