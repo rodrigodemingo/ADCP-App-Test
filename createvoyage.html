@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <title>ADPC Home Page</title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic" media="all">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="styles/base.min.css" />
+    <link rel="stylesheet" href="styles/iconfont.css" />
+    <link rel="stylesheet" href="styles/bootstrap-switch.min.css" />
+    <link href="styles/snarl.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="scripts/highlight.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="scripts/bootstrap-switch.min.js"></script>
+    <script src="scripts/snarl.min.js" type="text/javascript"></script>
+    <script src="scripts/waves.min.js" type="text/javascript"></script>
+
+    <style>
+        .cardtitle {
+            font-size: 20px;
+            background-color: #3e7c9c;
+            color: #fff;
+            padding: 10px 0px 10px 0px;
+        }
+        
+        body {
+            font-family: Roboto, RobotoMedium;
+            font-size: 14px;
+            background-color: #eee;
+        }
+        
+        .pagemargin {
+            margin-left: 83px;
+            margin-right: 83px;
+        }
+        
+        .card {
+            margin-top: 40px
+        }
+        
+        button.btn {
+            width: 100px;
+        }
+        
+        .material-icons.red {
+            color: #ad1f14;
+        }
+        
+        .material-icons.green {
+            color: #5ebf2a;
+        }
+        
+        .material-icons.blue {
+            color: #20a5e8;
+        }
+        
+        .logo {
+            width: 10%;
+        }
+        
+        .login {
+            margin-top: 30px;
+        }
+        
+        .status-bar label,
+        {
+            margin-left: 10px;
+        }
+        
+        .cardcontentmargin {
+            margin: 10px 0px 10px 0px;
+        }
+        
+        .stepwizard-step p {
+            margin-top: 10px;
+        }
+        
+        .stepwizard-row {
+            display: table-row;
+        }
+        
+        .stepwizard {
+            display: table;
+            width: 100%;
+            position: relative;
+        }
+        
+        .stepwizard-step button[disabled] {
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+        }
+        
+        .stepwizard-row:before {
+            top: 14px;
+            bottom: 0;
+            position: absolute;
+            content: " ";
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+            z-order: 0;
+        }
+        
+        .stepwizard-step {
+            display: table-cell;
+            text-align: center;
+            position: relative;
+        }
+        
+        .btn-circle {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            line-height: 1.428571429;
+            border-radius: 20px;
+            background-color: k-primary
+        }
+    </style>
+    <script type="text/javascript">
+        var filter = 'show';
+
+        function showmode(mode) {
+            $('#appmode').text(mode);
+        }
+
+        function showorhidefilter() {
+            if (filter == 'hide') {
+                $('#filterbox').show();
+                filter = 'show';
+            } else if (filter == 'show') {
+                $('#filterbox').hide();
+                filter = 'hide';
+            }
+        }
+
+
+        function savechanges() {
+            window.location.href = "index.html?saved=true";
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="pagemargin">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="logo pull-left" src="images/logo.png" />
+                <a href="#" id="notify"><img class="login pull-right" src="images/login.png" />
+                </a>
+            </div>
+        </div>
+        <!--Menu - rgb(55,71,79), Status - rgb(236,239,241) -->
+    </div>
+    <!--STATUS BAR -->
+    <div class="col-lg-12">
+        <div class="status-bar">
+            <label><strong>Voyage Number:&nbsp;</strong>
+            </label>
+            <label><strong>Port:&nbsp;</strong>
+            </label>
+            <label>Khalifa Port</label>
+            <label>KHL1212345</label>
+            <label><strong>Vessel:&nbsp;</strong>
+            </label>
+            <label>13/03/2015 12:30</label>
+            <label><strong>ATA:&nbsp;</strong>
+            </label>
+            <label>13/03/2015 12:30</label>
+            <label><strong>ETA:&nbsp;</strong>
+            </label>
+            <label>APL Phoenix</label>
+            <span id="appmode" class="label label-inverse pull-right">Inverse</span>
+        </div>
+    </div>
+    <!-- MAIN MENU -->
+    <div class="col-lg-12" style="background-color:rgb(55,71,79);padding:10px 0px 10px 0px;padding-right:30px">
+        <label style="margin-right:30px;color:rgb(255,255,255);margin-top:5px;margin-right:105px;" class="pull-right">Client To Port</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Port to Client</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Vessel Operations</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Manifest</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">Vessel Call</label>
+        <label style="margin-right:60px;color:rgb(255,255,255);margin-top:5px;" class="pull-right">General</label>
+    </div>
+
+
+
+    <!--CONTENT-->
+    <div class="row pagemargin">
+
+        <div class="container">
+
+            <div class="stepwizard">
+                <div class="stepwizard-row setup-panel">
+                    <div class="stepwizard-step">
+                        <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                        <p>Account Information</p>
+                    </div>
+                    <div class="stepwizard-step">
+                        <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                        <p>Create Voyage</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row setup-content" id="step-1">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="row clearfix">
+                                <div class="col-lg-4">
+                                    <label>Voyage Number*:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-4">
+                                    <label>Port *:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-4">
+                                    <label>Terminal*:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>Vessel *:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>ETA*:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>ETD*:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="row clearfix">
+                                <div class="col-lg-4">
+                                    <label>Flag:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-4">
+                                    <label>Call Sign:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="col-lg-4">
+                                    <label>IMO:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>Shipping Line *:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>Joint Venture:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>ETD*:</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <input type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Next</button>
+                </div>
+            </div>
+            <div class="row setup-content" id="step-2">
+                <div class="col-lg-12">
+                        <div class="row clearfix">
+                            <div class="col-lg-12">
+                                <div class="card card-blue">
+                                    <div class="card-main">
+                                        <div>
+                                            <div class="cardtitle">
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        Other Cargo Agents
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card">
+                                                <div class="card-main">
+                                                    <div class="row cardcontentmargin">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label> Previous Port: </labe>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label>Import Voyage N*: </label>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label>Departure Date: </label>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label>Next Port: </label>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label>Export Voyage N : </label>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label>Re-Export Voyage N : </label>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label>Due Date : </label>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="card">
+                                                <div class="card-main">
+
+                                                    <div class="row cardcontentmargin">
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label> Port of Loading*: </labe>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4">
+                                                                    <label>Port of Discharge*: </label>
+                                                                </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="row">
+                                                                <div class="col-lg-4"> Shipping owned Container: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="checkbox" class="form-control" /> </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-lg-4"> Status: </div>
+                                                                <div class="col-lg-8">
+                                                                    <input type="text" class="form-control" /> </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <button class="btn btn-primary nextBtn btn-lg pull-right" type="button">Create</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="scripts/base.min.js"></script>
+        <script src="scripts/bootstrap-switch.min.js"></script>
+        <script src="scripts/highlight.js"></script>
+        <script src="scripts/model.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                showmode('View');
+                $('#btnCreate').click(function () {
+                    showmode('Edit')
+                });
+                $('#btnView').click(function () {
+                    showmode('View')
+                });
+                $('#btnDelete').click(function () {
+                    showmode('Edit')
+                });
+                $('#btnEdit').click(function () {
+                    showmode('Edit')
+                });
+                $('#btnClose').click(function () {
+                    alert("Closed");
+                });
+                $('#btnOkay').click(function () {
+                    window.location.href = "container.html"
+                });
+
+                // Notification Starts Here
+
+                Snarl.setDefaultOptions({
+                    timeout: 2500
+                });
+
+                $('#notify').click(function () {
+                    Snarl.addNotification({
+                        title: 'Message',
+                        text: 'Message Sent Successfully'
+                    });
+                });
+
+
+                var navListItems = $('div.setup-panel div a'),
+                    allWells = $('.setup-content'),
+                    allNextBtn = $('.nextBtn');
+
+                allWells.hide();
+
+                navListItems.click(function (e) {
+                    e.preventDefault();
+                    var $target = $($(this).attr('href')),
+                        $item = $(this);
+
+                    if (!$item.hasClass('disabled')) {
+                        navListItems.removeClass('btn-primary').addClass('btn-default');
+                        $item.addClass('btn-primary');
+                        allWells.hide();
+                        $target.show();
+                        $target.find('input:eq(0)').focus();
+                    }
+                });
+
+                allNextBtn.click(function () {
+                    var curStep = $(this).closest(".setup-content"),
+                        curStepBtn = curStep.attr("id"),
+                        nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+                        curInputs = curStep.find("input[type='text'],input[type='url'],textarea[textarea]"),
+                        isValid = true;
+
+                    $(".form-group").removeClass("has-error");
+                    for (var i = 0; i < curInputs.length; i++) {
+                        if (!curInputs[i].validity.valid) {
+                            isValid = false;
+                            $(curInputs[i]).closest(".form-group").addClass("has-error");
+                        }
+                    }
+
+                    if (isValid)
+                        nextStepWizard.removeAttr('disabled').trigger('click');
+                });
+
+                $('div.setup-panel div a.btn-primary').trigger('click');
+
+
+            });
+        </script>
+
+</body>
+
+</html>
