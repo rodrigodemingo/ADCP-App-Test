@@ -238,8 +238,8 @@ input[type=color] {
     width: auto
 }
 
+
 input[type=time],
-input[type=date],
 input[type=datetime-local],
 input[type=month] {
     line-height: 24px;
@@ -8843,7 +8843,7 @@ a.fbtn:hover {
     border-radius: 0 2px 2px;
     list-style: none;
     margin: -1px 0 0!important;
-    min-width: 100%;
+/*    min-width: 100%;*/
     padding-top: 12px!important;
     padding-right: 0;
     padding-bottom: 12px!important;
@@ -8853,6 +8853,7 @@ a.fbtn:hover {
     left: 0;
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .15);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .15);
+/*
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transform: scale(.25, 0);
@@ -8863,7 +8864,8 @@ a.fbtn:hover {
     -webkit-transition: all .3s cubic-bezier(.4, 0, .2, 1);
     transition: all .3s cubic-bezier(.4, 0, .2, 1);
     -webkit-transition-property: opacity, -webkit-transform;
-    transition-property: opacity, transform
+    transition-property: opacity, transform*/
+
 }
 
 .dropdown.open .dropdown-menu {
