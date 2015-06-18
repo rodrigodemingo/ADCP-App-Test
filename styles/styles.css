@@ -4,7 +4,7 @@ body {
     background-color: #eee;
 }
 
-.cardtitle{
+.cardtitle {
     font-size: 20px;
     background-color: #3E7C9C;
     color: #FFF;
@@ -56,6 +56,15 @@ button.btn {
 
 .cardcontentmargin {
     margin: 10px;
+}
+
+.cardcontentmargin span {
+    margin: 0 45px;
+}
+
+.cardcontentmargin .col-lg-2 {
+    margin: 0 10px;
+    text-align: center;
 }
 
 .tab-main-menu {
