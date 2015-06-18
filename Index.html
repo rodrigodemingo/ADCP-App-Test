@@ -55,8 +55,8 @@
     <div class="pagemargin">
         <!-- Row 3 -->
         <div class="col-lg-12" id="filterbox">
-            <div class="card row adv-filter">
-                <div class="col-lg-12">
+            <div class="card row">
+                <div class="col-lg-12 adv-filter">
                     <div class="col-lg-1">
                         <label class="floating-label" for="float-select"></label>
                         <select class="form-control" id="float-select">
@@ -70,7 +70,7 @@
                         <input type="text" class="form-control" id="txt1" />
                     </div>
                     <div class="col-lg-1">
-                         <label class="floating-label" for="float-select"></label>
+                        <label class="floating-label" for="float-select"></label>
                         <select class="form-control" id="float-select">
                             <option value="">&nbsp;</option>
                             <option value="1">1</option>
@@ -84,7 +84,7 @@
                     <div class="col-lg-3">
                         <div class="row">
                             <div class="col-lg-3">
-                                <span class="adv-filter-text">Document</span>
+                                <span class="form-control">Document:</span>
                             </div>
                             <div class="col-lg-9">
                                 <select class="form-control">
@@ -107,7 +107,7 @@
                     <div class="col-lg-2">
                         <div class="row">
                             <div class="col-lg-4">
-                                <span>Updated</span>
+                                <span class="form-control">Updated:</span>
                             </div>
                             <div class="col-lg-8">
                                 <select class="form-control">
@@ -131,42 +131,44 @@
         <!-- Row 3 -->
         <div class="col-lg-12">
             <div class="row">
-                <div class="card">
-                    <div class="col-lg-8">
-                        <div class="form-inline">
-                            <div class="buttons-menu">
-                                <button id="btnCreate" type="button" class="btn btn-blue waves-button waves-effect waves-light">Create</button>
-                                <button id="btnView" type="button" class="btn waves-button waves-effect">View</button>
-                                <button id="btnEdit" type="button" class="btn waves-button waves-effect">Edit</button>
-                                <button id="btnDelete" type="button" class="btn waves-button waves-effect">Delete</button>
+                <div class="buttons-wrapper">
+                    <div class="card">
+                        <div class="col-lg-8">
+                            <div class="form-inline">
+                                <div class="buttons-menu">
+                                    <button id="btnCreate" type="button" class="btn btn-blue waves-button waves-effect waves-light">Create</button>
+                                    <button id="btnView" type="button" class="btn waves-button waves-effect">View</button>
+                                    <button id="btnEdit" type="button" class="btn waves-button waves-effect">Edit</button>
+                                    <button id="btnDelete" type="button" class="btn waves-button waves-effect">Delete</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="label-toggle-switch make-switch pull-right toggle-icon">
-                            <input type="checkbox" id="voyageview1" name="voyageview" checked>
+                        <div class="col-lg-3">
+                            <div class="label-toggle-switch make-switch pull-right toggle-icon">
+                                <input type="checkbox" id="voyageview1" name="voyageview" checked>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-1">
-                        <i id="showhidefilter" class="material-icons pull-left search-icon">&#xE8B6;</i>
-                        <ul class="nav nav-list pull-right">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <i class="material-icons">&#xE5D4;</i>
-                                </a>
-                                <ul class="dropdown-menu" style="max-width: 1111.5px;">
-                                    <li>
-                                        <a href="javascript:void(0)"><span class="margin-right-half">Prints</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"><span class="margin-right-half">Ops Review</span></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)"><span class="margin-right-half">Fulls Ops Reviews</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <div class="col-lg-1">
+                            <i id="showhidefilter" class="material-icons pull-left search-icon">&#xE8B6;</i>
+                            <ul class="nav nav-list pull-right">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="material-icons">&#xE5D4;</i>
+                                    </a>
+                                    <ul class="dropdown-menu" style="max-width: 1111.5px;">
+                                        <li>
+                                            <a href="javascript:void(0)"><span class="margin-right-half">Prints</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"><span class="margin-right-half">Ops Review</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)"><span class="margin-right-half">Fulls Ops Reviews</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -412,68 +414,63 @@
             </div>
         </div>
 
-        <div class="col-lg-12" id="cardview">
-
-            <div class="row clearfix">
+        <div id="cardview">
+            <div class="clearfix">
                 <div class="col-lg-6">
                     <div class="card card-blue">
                         <div class="card-main">
-                            <div>
-                                <div class="cardtitle">
-                                    <div class="row">
-                                        <div class="col-lg-11">
-                                            A Reyemi Cargo Clearing & Management Service
-                                        </div>
-                                        <div class="col-lg-1">
-                                            <ul class="nav nav-list pull-right">
-                                                <li class="dropdown">
-                                                    <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down white" aria-hidden="true"></span></a>
-                                                    <ul class="dropdown-menu" style="max-width: 1111.5px;">
-                                                        <li>
-                                                            <a href="javascript:void(0)"><span class="icon margin-right-half">Edit</span></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:void(0)"><span class="icon margin-right-half">Delete</span></a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="javascript:void(0)"><span class="icon margin-right-half">Select</span></a>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </div>
+                            <div class="cardtitle">
+                                <div class="row">
+                                    <div class="col-lg-11">
+                                        <span>A Reyemi Cargo Clearing & Management Service</span>
+                                    </div>
+                                    <div class="col-lg-1">
+                                        <ul class="nav nav-list pull-right">
+                                            <li class="dropdown">
+                                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down white" aria-hidden="true"></span></a>
+                                                <ul class="dropdown-menu" style="max-width: 1111.5px;">
+                                                    <li>
+                                                        <a href="javascript:void(0)"><span class="icon margin-right-half">Edit</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)"><span class="icon margin-right-half">Delete</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0)"><span class="icon margin-right-half">Select</span></a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <p>
-                                    <div class="row cardcontentmargin">
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="col-lg-3"> Voyage </div>
-                                                <div class="col-lg-8"> 3AS </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="col-lg-3"> Vessel </div>
-                                                <div class="col-lg-8"> IBN BASSAM </div>
-                                            </div>
-                                        </div>
+                            </div>
+                            <div class="row cardcontentmargin">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-lg-3">Voyage</div>
+                                        <div class="col-lg-8">3AS</div>
                                     </div>
-                                    <div class="row cardcontentmargin">
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="col-lg-3"> ETA/ATA </div>
-                                                <div class="col-lg-8"> 23/05/2015 00:00 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="row">
-                                                <div class="col-lg-3"> ETD/ATD </div>
-                                                <div class="col-lg-8"> 23/05/2015 00:00 </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-lg-3"> Vessel </div>
+                                        <div class="col-lg-8"> IBN BASSAM </div>
                                     </div>
-                                </p>
+                                </div>
+                            </div>
+                            <div class="row cardcontentmargin">
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-lg-3"> ETA/ATA </div>
+                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="row">
+                                        <div class="col-lg-3"> ETD/ATD </div>
+                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-action">
                                 <div class="row">
@@ -495,7 +492,6 @@
                                             <div class="col-lg-2">
                                                 Alerts
                                             </div>
-
                                         </div>
                                         <div class="row cardcontentmargin">
                                             <div class="col-lg-2">
