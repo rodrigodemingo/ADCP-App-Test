@@ -1,0 +1,75 @@
+<div class="pagemargin">
+    <div class="row">
+        <div class="col-lg-12">
+            <img class="logo pull-left" src="images/logo.png" />
+            <a href="#" id="notify"><img class="login pull-right" src="images/login.png" />
+            </a>
+        </div>
+    </div>
+    <!--Menu - rgb(55,71,79), Status - rgb(236,239,241) -->
+</div>
+<!--STATUS BAR -->
+<div class="col-lg-12">
+    <div class="row">
+        <div class="status-bar">
+            <label><strong>Voyage Number:</strong>
+            </label>
+            <label>KHL1212345</label>
+            <label><strong>Port:</strong>
+            </label>
+            <label>Khalifa Port</label>
+            <label><strong>Vessel:</strong>
+            </label>
+            <label>13/03/2015 12:30</label>
+            <label><strong>ATA:</strong>
+            </label>
+            <label>13/03/2015 12:30</label>
+            <label><strong>ETA:</strong>
+            </label>
+            <label>APL Phoenix</label>
+            <span id="appmode" class="label label-default">VIEW</span>
+        </div>
+    </div>
+</div>
+<!-- MAIN MENU -->
+<div class="col-lg-12 tab-main-menu">
+    <div class="col-lg-8 pull-right">
+        <nav class="tab-nav tab-nav-red tab-main-menu">
+            <ul class="nav nav-justified">
+                <li class="active">
+                    <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">General</a>
+                </li>
+                <li>
+                    <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">Vessel Call</a>
+                </li>
+                <li>
+                    <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">Manifest</a>
+                </li>
+                <li>
+                    <a class="waves-color-red waves-effect" data-toggle="tab" href="#third-tab-red">Vessel Operations</a>
+                </li>
+                <li>
+                    <a class="waves-color-red waves-effect" data-toggle="tab" href="#first-tab-red" aria-expanded="false">Client To Port</a>
+                </li>
+                <li>
+                    <a class="waves-color-red waves-effect" data-toggle="tab" href="#second-tab-red" aria-expanded="true">Port to Client</a>
+                </li>
+            </ul>
+            <div class="tab-nav-indicator"></div>
+        </nav>
+    </div>
+</div>
+<script>
+    // Notification Starts Here
+
+    Snarl.setDefaultOptions({
+        timeout: 2500
+    });
+
+    $('#notify').click(function () {
+        Snarl.addNotification({
+            title: 'Message',
+            text: 'Message Sent Successfully'
+        });
+    });
+</script>

@@ -77,6 +77,10 @@ button.btn {
     color: black;
 }
 
+.nav>li>a {
+    padding: 12px 15px;
+}
+
 #appmode {
     margin: 0 40px;
     width: 60px;
@@ -106,4 +110,30 @@ span.fbtn-ori.icon.icon-open-in-new {
 .form-control {
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+
+.dropdown i.material-icons {
+    color: #000;
+    top: 3px;
+    position: relative;
+}
+
+.toggle-icon,
+.buttons-menu {
+    margin-top: 10px;
+}
+
+.search-icon {
+    margin: 15px 0 0 30px;
+    cursor: pointer;
+}
+
+.buttons-menu .btn.waves-effect {
+    margin-left: 5px;
+}
+.adv-filter {
+    height: 45px;
+}
+span.adv-filter-text {
+    margin-top: 22px;
 }
