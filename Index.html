@@ -54,10 +54,10 @@
     <!--CONTENT-->
     <div class="pagemargin">
         <!-- Row 3 -->
-        <div class="col-lg-12" id="filterbox">
+        <div class="col-md-12" id="filterbox">
             <div class="card row">
-                <div class="col-lg-12 adv-filter">
-                    <div class="col-lg-1">
+                <div class="col-md-12 adv-filter">
+                    <div class="col-md-1">
                         <label class="floating-label" for="float-select"></label>
                         <select class="form-control" id="float-select">
                             <option value="">&nbsp;</option>
@@ -66,10 +66,10 @@
                             <option value="3">3</option>
                         </select>
                     </div>
-                    <div class="col-lg-1">
+                    <div class="col-md-1">
                         <input type="text" class="form-control" id="txt1" />
                     </div>
-                    <div class="col-lg-1">
+                    <div class="col-md-1">
                         <label class="floating-label" for="float-select"></label>
                         <select class="form-control" id="float-select">
                             <option value="">&nbsp;</option>
@@ -78,15 +78,15 @@
                             <option value="3">3</option>
                         </select>
                     </div>
-                    <div class="col-lg-1">
+                    <div class="col-md-1">
                         <input type="text" class="form-control" id="txt2" />
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-md-2">
                         <div class="row">
-                            <div class="col-lg-3">
+                            <div class="col-md-3">
                                 <span class="form-control">Document:</span>
                             </div>
-                            <div class="col-lg-9">
+                            <div class="col-md-9">
                                 <select class="form-control">
                                     <option value="Value1">Value 2</option>
                                     <option value="Value 2">Value 2</option>
@@ -96,7 +96,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-2">
+                    <div class="col-md-2">
                         <!-- Place Holder - Status -->
                         <select class="form-control">
                             <option value="Value1">Value 1</option>
@@ -104,12 +104,12 @@
                             <option value="Value 3">Value 3</option>
                         </select>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-md-2">
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col-md-4">
                                 <span class="form-control">Updated:</span>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-md-8">
                                 <select class="form-control">
                                     <option value="Value1">Value 2</option>
                                     <option value="Value 2">Value 2</option>
@@ -119,9 +119,9 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-1">
-                        <a href="#"><span><i class="material-icons">clear</i></span></a>
-                        <a href="#"><span><i class="material-icons">search</i></span></a>
+                    <div class="col-md-2">
+                        <a href="#"><span><i class="material-icons pull-right">clear</i></span></a>
+                        <a href="#"><span><i class="material-icons pull-right">search</i></span></a>
                     </div>
                 </div>
 
@@ -129,11 +129,11 @@
         </div>
 
         <!-- Row 3 -->
-        <div class="col-lg-12">
+        <div class="col-md-12">
             <div class="row">
                 <div class="buttons-wrapper">
                     <div class="card">
-                        <div class="col-lg-8">
+                        <div class="col-md-8">
                             <div class="form-inline">
                                 <div class="buttons-menu">
                                     <button id="btnCreate" type="button" class="btn btn-blue waves-button waves-effect waves-light">Create</button>
@@ -143,12 +143,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-md-2">
                             <div class="label-toggle-switch make-switch pull-right toggle-icon">
                                 <input type="checkbox" id="voyageview1" name="voyageview" checked>
                             </div>
                         </div>
-                        <div class="col-lg-1">
+                        <div class="col-md-2">
                             <i id="showhidefilter" class="material-icons pull-left search-icon">&#xE8B6;</i>
                             <ul class="nav nav-list pull-right">
                                 <li class="dropdown">
@@ -175,8 +175,8 @@
         </div>
         <!-- TABLE GRID -->
         <div id="listview">
-            <div class="col-lg-12 card">
-                <div class="col-lg-12 table-responsive">
+            <div class="col-md-12 card">
+                <div class="col-md-12 table-responsive">
                     <table class="table table-hover table-stripe" title="Table with Hover and Stripe Rows">
                         <thead>
                             <tr>
@@ -214,11 +214,11 @@
                                                 </div>
                                                 <div class="modal-inner">
                                                     <div class="row">
-                                                        <div class="col-lg-6">
+                                                        <div class="col-md-6">
                                                             <div class="form-control"><strong>Terminal*: </strong>
                                                             </div>
                                                         </div>
-                                                        <div class="col-lg-6">
+                                                        <div class="col-md-6">
                                                             <select class="form-control">
                                                                 <option value="Value1">Filter 2</option>
                                                                 <option value="Value 2">Value 2</option>
@@ -291,7 +291,7 @@
                                 </td>
                                 <td><i class="material-icons">border_color</i>
                                 </td>
-                                <td><i class="material-icons blue">add_circle</i>
+                                <td><a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                 </td>
                                 <td><i class="material-icons red">report_problem</i>
                                 </td>
@@ -323,7 +323,7 @@
                                 </td>
                                 <td><i class="material-icons">border_color</i>
                                 </td>
-                                <td><i class="material-icons blue">add_circle</i>
+                                <td><a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                 </td>
                                 <td><i class="material-icons red">report_problem</i>
                                 </td>
@@ -355,7 +355,7 @@
                                 </td>
                                 <td><i class="material-icons">border_color</i>
                                 </td>
-                                <td><i class="material-icons blue">add_circle</i>
+                                <td><a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                 </td>
                                 <td><i class="material-icons red">report_problem</i>
                                 </td>
@@ -387,7 +387,7 @@
                                 </td>
                                 <td><i class="material-icons">border_color</i>
                                 </td>
-                                <td><i class="material-icons blue">add_circle</i>
+                                <td><a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                 </td>
                                 <td><i class="material-icons red">report_problem</i>
                                 </td>
@@ -416,15 +416,15 @@
 
         <div id="cardview">
             <div class="clearfix">
-                <div class="col-lg-6">
+                <div class="col-md-12 col-lg-6">
                     <div class="card card-blue">
                         <div class="card-main">
                             <div class="cardtitle">
                                 <div class="row">
-                                    <div class="col-lg-11">
+                                    <div class="col-md-11">
                                         <span>A Reyemi Cargo Clearing & Management Service</span>
                                     </div>
-                                    <div class="col-lg-1">
+                                    <div class="col-md-1">
                                         <ul class="nav nav-list pull-right">
                                             <li class="dropdown">
                                                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down white" aria-hidden="true"></span></a>
@@ -445,67 +445,67 @@
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3">Voyage</div>
-                                        <div class="col-lg-8">3AS</div>
+                                        <div class="col-md-3">Voyage</div>
+                                        <div class="col-md-8">3AS</div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> Vessel </div>
-                                        <div class="col-lg-8"> IBN BASSAM </div>
+                                        <div class="col-md-3"> Vessel </div>
+                                        <div class="col-md-8"> IBN BASSAM </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETA/ATA </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETA/ATA </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETD/ATD </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETD/ATD </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-action">
                                 <div class="row">
-                                    <div class="col-lg-12 ">
+                                    <div class="col-md-12 ">
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Call Request
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Loading List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Manifest
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Discharge List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Alerts
                                             </div>
                                         </div>
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">archive</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">border_color</i>
                                             </div>
-                                            <div class="col-lg-2">
-                                                <i class="material-icons blue">add_circle</i>
+                                            <div class="col-md-2">
+                                                <a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons red">report_problem</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons yellow">report_problem</i>
                                             </div>
                                         </div>
@@ -515,15 +515,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-12 col-lg-6">
                     <div class="card card-blue">
                         <div class="card-main">
                             <div class="cardtitle">
                                 <div class="row">
-                                    <div class="col-lg-11">
+                                    <div class="col-md-11">
                                         <span>A Reyemi Cargo Clearing & Management Service</span>
                                     </div>
-                                    <div class="col-lg-1">
+                                    <div class="col-md-1">
                                         <ul class="nav nav-list pull-right">
                                             <li class="dropdown">
                                                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down white" aria-hidden="true"></span></a>
@@ -544,67 +544,67 @@
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3">Voyage</div>
-                                        <div class="col-lg-8">3AS</div>
+                                        <div class="col-md-3">Voyage</div>
+                                        <div class="col-md-8">3AS</div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> Vessel </div>
-                                        <div class="col-lg-8"> IBN BASSAM </div>
+                                        <div class="col-md-3"> Vessel </div>
+                                        <div class="col-md-8"> IBN BASSAM </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETA/ATA </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETA/ATA </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETD/ATD </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETD/ATD </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-action">
                                 <div class="row">
-                                    <div class="col-lg-12 ">
+                                    <div class="col-md-12 ">
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Call Request
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Loading List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Manifest
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Discharge List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Alerts
                                             </div>
                                         </div>
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">archive</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">border_color</i>
                                             </div>
-                                            <div class="col-lg-2">
-                                                <i class="material-icons blue">add_circle</i>
+                                            <div class="col-md-2">
+                                                <a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons red">report_problem</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons yellow">report_problem</i>
                                             </div>
                                         </div>
@@ -615,16 +615,16 @@
                     </div>
                 </div>
             </div>
-<div class="clearfix">
-                <div class="col-lg-6">
+            <div class="clearfix">
+                <div class="col-md-12 col-lg-6">
                     <div class="card card-blue">
                         <div class="card-main">
                             <div class="cardtitle">
                                 <div class="row">
-                                    <div class="col-lg-11">
+                                    <div class="col-md-11">
                                         <span>A Reyemi Cargo Clearing & Management Service</span>
                                     </div>
-                                    <div class="col-lg-1">
+                                    <div class="col-md-1">
                                         <ul class="nav nav-list pull-right">
                                             <li class="dropdown">
                                                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down white" aria-hidden="true"></span></a>
@@ -645,67 +645,67 @@
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3">Voyage</div>
-                                        <div class="col-lg-8">3AS</div>
+                                        <div class="col-md-3">Voyage</div>
+                                        <div class="col-md-8">3AS</div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> Vessel </div>
-                                        <div class="col-lg-8"> IBN BASSAM </div>
+                                        <div class="col-md-3"> Vessel </div>
+                                        <div class="col-md-8"> IBN BASSAM </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETA/ATA </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETA/ATA </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETD/ATD </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETD/ATD </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-action">
                                 <div class="row">
-                                    <div class="col-lg-12 ">
+                                    <div class="col-md-12 ">
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Call Request
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Loading List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Manifest
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Discharge List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Alerts
                                             </div>
                                         </div>
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">archive</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">border_color</i>
                                             </div>
-                                            <div class="col-lg-2">
-                                                <i class="material-icons blue">add_circle</i>
+                                            <div class="col-md-2">
+                                                <a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons red">report_problem</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons yellow">report_problem</i>
                                             </div>
                                         </div>
@@ -715,15 +715,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-md-12 col-lg-6">
                     <div class="card card-blue">
                         <div class="card-main">
                             <div class="cardtitle">
                                 <div class="row">
-                                    <div class="col-lg-11">
+                                    <div class="col-md-11">
                                         <span>A Reyemi Cargo Clearing & Management Service</span>
                                     </div>
-                                    <div class="col-lg-1">
+                                    <div class="col-md-1">
                                         <ul class="nav nav-list pull-right">
                                             <li class="dropdown">
                                                 <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="glyphicon glyphicon-chevron-down white" aria-hidden="true"></span></a>
@@ -744,67 +744,67 @@
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3">Voyage</div>
-                                        <div class="col-lg-8">3AS</div>
+                                        <div class="col-md-3">Voyage</div>
+                                        <div class="col-md-8">3AS</div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> Vessel </div>
-                                        <div class="col-lg-8"> IBN BASSAM </div>
+                                        <div class="col-md-3"> Vessel </div>
+                                        <div class="col-md-8"> IBN BASSAM </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row cardcontentmargin">
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETA/ATA </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETA/ATA </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-md-6">
                                     <div class="row">
-                                        <div class="col-lg-3"> ETD/ATD </div>
-                                        <div class="col-lg-8"> 23/05/2015 00:00 </div>
+                                        <div class="col-md-3"> ETD/ATD </div>
+                                        <div class="col-md-8"> 23/05/2015 00:00 </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-action">
                                 <div class="row">
-                                    <div class="col-lg-12 ">
+                                    <div class="col-md-12 ">
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Call Request
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Loading List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Manifest
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Discharge List
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 Alerts
                                             </div>
                                         </div>
                                         <div class="row cardcontentmargin">
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">archive</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons">border_color</i>
                                             </div>
-                                            <div class="col-lg-2">
-                                                <i class="material-icons blue">add_circle</i>
+                                            <div class="col-md-2">
+                                                <a data-toggle="modal" href="#modal-big"><i class="material-icons blue">add_circle</i></a>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons red">report_problem</i>
                                             </div>
-                                            <div class="col-lg-2">
+                                            <div class="col-md-2">
                                                 <i class="material-icons yellow">report_problem</i>
                                             </div>
                                         </div>
@@ -861,7 +861,8 @@
             $("#includedContent").load("navmenu.html");
             showmode('View');
             $('#btnCreate').click(function () {
-                showmode('Edit')
+                showmode('Edit');
+                window.location.href = "createvoyage.html";
             });
             $('#btnView').click(function () {
                 showmode('View')

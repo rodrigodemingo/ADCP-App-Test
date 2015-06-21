@@ -21,6 +21,10 @@ button.btn {
     width: 100px;
 }
 
+#listview i.material-icons {
+    font-size: 18px;
+}
+
 .material-icons.red {
     color: #ad1f14;
 }
@@ -130,8 +134,10 @@ span.fbtn-ori.icon.icon-open-in-new {
 }
 
 .search-icon {
-    margin: 15px 0 0 30px;
+    left: 85px;
     cursor: pointer;
+    position: absolute;
+    top: 15px;
 }
 
 .buttons-menu .btn.waves-effect {
