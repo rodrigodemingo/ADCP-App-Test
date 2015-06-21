@@ -4,12 +4,16 @@ body {
     background-color: #eee;
 }
 
+label {
+    font-weight: bold;
+}
+
 .cardtitle {
     font-size: 20px;
     background-color: #3E7C9C;
     color: #FFF;
     line-height: 48px;
-    padding-left: 25px;
+    padding-left: 10px;
 }
 
 .pagemargin {
@@ -58,19 +62,6 @@ button.btn {
     margin-left: 10px;
 }
 
-.cardcontentmargin {
-    margin: 10px;
-}
-
-.cardcontentmargin span {
-    margin: 0 45px;
-}
-
-.cardcontentmargin .col-lg-2 {
-    margin: 0 10px;
-    text-align: center;
-}
-
 .tab-main-menu {
     background-color: #37474F;
     margin: 0;
@@ -85,10 +76,6 @@ button.btn {
 .tab-main-menu .nav>li.active>a:focus,
 .tab-main-menu .nav>li:hover {
     color: black;
-}
-
-.nav>li>a {
-    padding: 12px 15px;
 }
 
 #appmode {
@@ -122,7 +109,7 @@ span.fbtn-ori.icon.icon-open-in-new {
     box-shadow: none;
 }
 
-.dropdown i.material-icons {
+.buttons-wrapper .dropdown i.material-icons {
     color: #000;
     top: 3px;
     position: relative;
@@ -174,4 +161,41 @@ nav.tab-nav.tab-nav-red.tab-main-menu {
 .buttons-menu {
     position: relative;
     top: 10px;
+}
+
+.cardcontentmargin > form > div > label {
+    display: inline-block;
+    width: 100px;
+    margin-left: 75px;
+}
+
+.cardcontentmargin > form > div > span {
+    display: inline-block;
+    width: 120px;
+}
+
+li.card-icons {
+    float: left;
+    width: 20%;
+    height: 70px;
+    line-height: 1.4;
+    text-align: center;
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+li.card-icons > span {
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+
+.cardcontentmargin > ul {
+    border-top: 1px solid #D3D3D3;
+    margin: 15px 0;
+}
+
+.cardtitle > ul > li > a > i {
+    color: white;
 }
