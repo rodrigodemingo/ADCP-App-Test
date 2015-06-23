@@ -6957,6 +6957,7 @@ pre code {
     padding-left: 16px
 }
 
+/*
 @media only screen and (min-width: 992px) {
     .container {
         max-width: 960px
@@ -6968,6 +6969,7 @@ pre code {
         max-width: 1408px
     }
 }
+*/
 
 .container-full {
     max-width: none
@@ -12560,6 +12562,7 @@ input[type=radio]:checked+.switch-toggle-yellow:after {
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none
 }
+/*
 
 @media only screen and (min-width: 480px) {
     .menu-wrap {
@@ -12645,4 +12648,4 @@ input[type=radio]:checked+.switch-toggle-yellow:after {
         padding-right: 16px;
         right: 240px
     }
-}
+}*/

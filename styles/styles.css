@@ -8,17 +8,14 @@ label {
     font-weight: bold;
 }
 
-.cardtitle {
-    font-size: 20px;
-    background-color: #3E7C9C;
-    color: #FFF;
-    line-height: 48px;
-    padding-left: 10px;
+.container {
+    width: 90%;
 }
 
-.pagemargin {
-    margin-left: 83px;
-    margin-right: 83px;
+.content-heading,
+.page-alt .content-heading {
+    background-color: #fff;
+    padding-top: 0;
 }
 
 button.btn {
@@ -67,6 +64,10 @@ button.btn {
     margin: 0;
 }
 
+.tab-main-menu .nav>li>a {
+    padding: 12px 8px;
+}
+
 .tab-main-menu .nav>li.active>a,
 .tab-main-menu .nav>li>a {
     color: white;
@@ -107,6 +108,7 @@ span.fbtn-ori.icon.icon-open-in-new {
 .form-control {
     -webkit-box-shadow: none;
     box-shadow: none;
+    font-size: 14px;
 }
 
 .buttons-wrapper .dropdown i.material-icons {
@@ -130,12 +132,7 @@ span.fbtn-ori.icon.icon-open-in-new {
 .buttons-menu .btn.waves-effect {
     margin-left: 5px;
 }
-
-#filterbox {
-    margin-top: 10px;
-    margin-bottom: -10px;
-}
-
+/*
 .adv-filter {
     height: 52px;
     padding-top: 5px;
@@ -146,12 +143,18 @@ span.fbtn-ori.icon.icon-open-in-new {
     color: black;
 }
 
+span.adv-filter-text {
+    margin-top: 22px;
+}
+
 label.floating-label {
     margin-top: 5px;
 }
+*/
+/*FIX bottom line menu*/
 
-span.adv-filter-text {
-    margin-top: 22px;
+.tab-nav {
+    border-bottom: 1px solid #37474F;
 }
 
 nav.tab-nav.tab-nav-red.tab-main-menu {
@@ -163,10 +166,49 @@ nav.tab-nav.tab-nav-red.tab-main-menu {
     top: 10px;
 }
 
+.cardtitle {
+    font-size: 18px;
+    background-color: #3E7C9C;
+    color: #FFF;
+    line-height: 50px;
+    padding-left: 10px;
+}
+/*ADVANCED SEARCH FILTER*/
+
+.adv-filter-wrap {
+    margin-top: 20px;
+}
+
+.adv-filter-wrap #filterbox .form-group {
+    margin: 10px 0;
+}
+
+.adv-filter-wrap #filterbox > div > div > form > div:nth-child(5) > div > span,
+.adv-filter-wrap #filterbox > div > div > form > div:nth-child(7) > div > span,
+.adv-filter-wrap #filterbox > div > div > form > div:nth-child(9) > div > span {
+    line-height: 40px;
+}
+
+.adv-filter-wrap .resize {
+    padding: 5px 0px;
+    right: 2%;
+}
+
+.adv-filter-wrap i.material-icons {
+    margin-left: 14%;
+}
+
+.cardcontentmargin {
+    padding: 0 10%;
+}
+
+.cardcontentmargin .form-group {
+    margin: 3%;
+}
+
 .cardcontentmargin > form > div > label {
     display: inline-block;
     width: 100px;
-    margin-left: 75px;
 }
 
 .cardcontentmargin > form > div > span {
@@ -174,14 +216,22 @@ nav.tab-nav.tab-nav-red.tab-main-menu {
     width: 120px;
 }
 
+.card-main > ul {
+    border-top: 1px solid #D3D3D3;
+}
+
 li.card-icons {
     float: left;
     width: 20%;
-    height: 70px;
-    line-height: 1.4;
+    height: 75px;
+    line-height: 1.5;
     text-align: center;
     list-style-type: none;
-    margin-top: 20px;
+    padding-top: 10px;
+}
+
+li.card-icons:hover {
+    background-color: rgb(238, 238, 238);
 }
 
 li.card-icons > span {
@@ -191,11 +241,14 @@ li.card-icons > span {
     margin-bottom: 10px;
 }
 
-.cardcontentmargin > ul {
-    border-top: 1px solid #D3D3D3;
-    margin: 15px 0;
-}
-
 .cardtitle > ul > li > a > i {
     color: white;
+}
+/* IPAD MEDIA QUERIES*/
+
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    .adv-filter-wrap i.material-icons {
+        margin-left: 10%;
+    }
+    /* your css rules for ipad landscape */
 }
