@@ -119,11 +119,15 @@ span.fbtn-ori.icon.icon-open-in-new {
 
 .buttons-wrapper,
 .toggle-icon {
-    margin-top: 10px;
+    padding-top: 10px;
 }
 
-.search-icon {
-    left: 85px;
+.buttons-wrapper ul.nav.nav-list.pull-right {
+    left: 16px;
+}
+
+.buttons-wrapper .search-icon {
+    right: 71px;
     cursor: pointer;
     position: absolute;
     top: 15px;
@@ -202,18 +206,14 @@ nav.tab-nav.tab-nav-red.tab-main-menu {
     padding: 0 10%;
 }
 
-.cardcontentmargin .form-group {
-    margin: 3%;
-}
-
 .cardcontentmargin > form > div > label {
     display: inline-block;
-    width: 100px;
+    width: 107px;
 }
 
 .cardcontentmargin > form > div > span {
     display: inline-block;
-    width: 120px;
+    width: 115px;
 }
 
 .card-main > ul {
