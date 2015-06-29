@@ -15,7 +15,7 @@ label {
 .content-heading,
 .page-alt .content-heading {
     background-color: #fff;
-    padding-top: 0;
+    padding: 0 6%;
 }
 
 .logo {
@@ -23,12 +23,12 @@ label {
 }
 
 .login {
-    margin-top: 30px;
+    margin: 30px;
 }
 
 .status-bar {
     text-align: right;
-    padding-right: 60px;
+    padding-right: 4.8%;
     background-color: rgba(55, 71, 79, 0.1);
     line-height: 30px;
     font-size: 13px;
@@ -37,6 +37,16 @@ label {
 .status-bar label,
 .status-bar label strong {
     margin-left: 10px;
+}
+/*MAIN MENU*/
+/*FIX bottom line menu*/
+
+.navbar-right {
+    margin: 0 4.2%;
+}
+
+.tab-nav {
+    border-bottom: 1px solid #37474F;
 }
 
 .tab-main-menu {
@@ -90,7 +100,7 @@ button.btn {
 }
 
 #appmode {
-    margin: 0 40px;
+    margin: 0 20px;
     width: 60px;
     display: inline-block;
     line-height: 14px;
@@ -147,15 +157,6 @@ span.fbtn-ori.icon.icon-open-in-new {
 
 .buttons-menu .btn.waves-effect {
     margin-left: 5px;
-}
-/*FIX bottom line menu*/
-
-.tab-nav {
-    border-bottom: 1px solid #37474F;
-}
-
-nav.tab-nav.tab-nav-red.tab-main-menu {
-    margin-right: 50px;
 }
 
 .buttons-menu {
